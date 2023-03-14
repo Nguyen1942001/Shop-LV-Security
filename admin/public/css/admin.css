@@ -1,0 +1,40 @@
+table th  {
+    /* Các cột của bảng không tự xuống dòng khi kích thước bảng vượt quá kích thước màn hình */
+	white-space: nowrap;
+} 
+
+table td {
+	white-space: normal;
+}
+
+.search-result {
+    position: absolute;
+    width: 96.8%;
+    background-color:#fff;
+
+    z-index: 1001;
+    max-height: 250px;
+
+    /* tự động hiện thanh cuộn khi phần tử con vượt quá phần tử cha */
+    overflow: auto;
+
+    /* ẩn thanh cuộn ngang */
+    overflow-x: hidden;
+
+    border: grey 0.5px solid;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    display: none;
+
+}
+
+/* Trong row đã có sẵn display flex (bootstrap) */
+.search-result .row {
+    align-items: center;  /* căn theo chiều dọc */
+}
+
+/* Canh giữa số thứ tự cho ô search sp bằng ajax (trong phần thêm mới đơn hàng) (view/order/add.php) */
+.search-result .row .col-1:first-child {
+    display: flex;
+    justify-content: center;   /* căn theo chiều ngang */
+}
